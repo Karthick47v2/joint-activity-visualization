@@ -25,10 +25,12 @@ Mediapipe and OpenCV doesn't support multicolor in single line. So in order to v
 
 Detailed explanation about tuning parameters / variables used in project file
 
-- `line_size` = width of line that used to draw skeleton.
-- `amplification_factor` = distance between joint coordinates would be small in consecutive frames are these are differences of normalized landmarks (x and y ranges from 0-1) so it is used to amplify difference.
-- `max_b/g/r` = values of BGR joint aka high intensity point
-- `b/g/r_spread` = how BGR spread when going out from joint (intensity will decrease)
+- `LINE_SIZE` = width of line that used to draw skeleton.
+- `AMPLIFICATION_FACTOR` = distance between joint coordinates would be small in consecutive frames are these are differences of normalized landmarks (x and y ranges from 0-1) so it is used to amplify difference.
+- `SMOOTHENING_FACTOR` = smoothen the jump of difference in joint coordinates in consecutive frames
+- `DISTANCE_THRESHOLD` = minimum movement of joint needed to get rendered
+- `B/G/R_MAX` = values of BGR joint aka high intensity point
+- `B/G/R_SPREAD` = how BGR spread when going out from joint (intensity will decrease)
 
 ## Loops in `draw_hm_skeleton()`
 
